@@ -30,7 +30,8 @@ defmodule FilterFormatter.MixProject do
   defp deps do
     [
       {:rambo, "~> 0.3.0"},
-      {:ex_doc, "~> 0.27", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.27", only: :dev, runtime: false},
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false}
     ]
   end
 end
