@@ -7,7 +7,15 @@ defmodule FilterFormatter.MixProject do
       version: "0.1.0",
       elixir: "~> 1.15",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+
+      # For documentation
+      name: "FilterFormatter",
+      source_url: "https://github.com/frerich/filter_formatter",
+      docs: [
+        main: "FilterFormatter",
+        extras: ["LICENSE.md"]
+      ]
     ]
   end
 
@@ -21,7 +29,8 @@ defmodule FilterFormatter.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:rambo, "~> 0.3.0"}
+      {:rambo, "~> 0.3.0"},
+      {:ex_doc, "~> 0.27", only: :dev, runtime: false}
     ]
   end
 end
