@@ -31,7 +31,8 @@ defmodule FilterFormatter.MixProject do
     [
       {:rambo, "~> 0.3.0"},
       {:ex_doc, "~> 0.27", only: :dev, runtime: false},
-      {:credo, "~> 1.7", only: [:dev, :test], runtime: false}
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
+      {:mock, "~> 0.3.0", only: :test}
     ]
   end
 end
