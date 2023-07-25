@@ -9,6 +9,13 @@ defmodule FilterFormatter.MixProject do
       start_permanent: Mix.env() == :prod,
       deps: deps(),
 
+      # For packaging
+      description: "A mix format plugin for calling external filter programs",
+      package: [
+        licenses: ["MIT"],
+        links: %{"GitHub" => "https://github.com/frerich/filter_formatter"}
+      ],
+
       # For documentation
       name: "FilterFormatter",
       source_url: "https://github.com/frerich/filter_formatter",
