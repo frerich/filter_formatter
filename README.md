@@ -9,7 +9,7 @@ The program is expected to read input via stdin and produce formatter output on
 stdout. An exit code of 0 is considered success, any other exit code is
 considered failure.
 
-This makes it easy to hook any command line tool into `mix format`
+This makes it easy to hook any command line tool into `mix format`.
 
 ## Installation
 
@@ -23,7 +23,16 @@ def deps do
 end
 ```
 
-Next, add `FilterFormatter` to your `.formatter.exs` file and configure the
+Next, fetch dependencies. This will also pull in
+[Rambo](https://hex.pm/packages/rambo) since that's what this plugin uses for
+running external programs. To make sure that Rambo works, run `mix
+compile.rambo` once to build any required intermediate binaries.
+
+```sh
+mix deps.get && mix compile.rambo
+```
+
+Finally, add `FilterFormatter` to your `.formatter.exs` file and configure the
 `filter_formatter` option such that it associates sigils and/or file extensions
 with commands to execute:
 
