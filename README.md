@@ -32,6 +32,18 @@ compile.rambo` once to build any required intermediate binaries.
 mix deps.get && mix compile.rambo
 ```
 
+Rambo depends on a helper binary written in Rust. In case the `mix
+compile.rambo` step prints a message like
+
+> ** (RuntimeError) Rambo does not ship with binaries for your environment.
+
+Make sure to have Rust available before running `mix compile.rambo`. Using
+Homebrew, this is a matter of running
+
+```sh
+brew install rustc
+```
+
 Finally, add `FilterFormatter` to your `.formatter.exs` file and configure the
 `filter_formatter` option such that it associates sigils and/or file extensions
 with commands to execute:
