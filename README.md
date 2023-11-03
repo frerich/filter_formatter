@@ -41,7 +41,7 @@ Make sure to have Rust available before running `mix compile.rambo`. Using
 Homebrew, this is a matter of running
 
 ```sh
-brew install rustc
+brew install rust
 ```
 
 Finally, add `FilterFormatter` to your `.formatter.exs` file and configure the
