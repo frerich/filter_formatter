@@ -70,7 +70,7 @@ code in any `.sql` files through
   plugins: [FilterFormatter],
   filter_formatter: [
     [
-      extensions: ["*.sql"],
+      extensions: [".sql"],
       sigils: [:SQL],
       executable: "pg_format",
       args: ["-L"]
@@ -89,7 +89,7 @@ Here's another example of formatting SQL, this time using
   plugins: [FilterFormatter],
   filter_formatter: [
     [
-      extensions: ["*.sql"],
+      extensions: [".sql"],
       sigils: [:SQL],
       executable: "sqlformat",
       args: ["format", "-", "--dialect", "postgres", "--nocolor", "--disable-progress-bar"]
