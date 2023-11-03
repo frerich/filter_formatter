@@ -58,10 +58,30 @@ with commands to execute:
 ]
 ```
 
-## Example: filtering SQL via SQLFluff
+## Example: formatting SQL via pg_format
 
-This specification which makes `mix format` pass the contents of the `SQL`
-sigil as well as the code in any `.sql` files through
+This configuration makes `mix format` pass the contents This specification
+which makes `mix format` pass the contents of the `SQL` sigil as well as the
+code in any `.sql` files through
+[pg_format](https://github.com/darold/pgFormatter).
+
+```elixir
+[
+  plugins: [FilterFormatter],
+  filter_formatter: [
+    [
+      extensions: ["*.sql"],
+      sigils: [:SQL],
+      executable: "pg_format",
+      args: ["-L"]
+    ]
+  }
+]
+```
+
+## Example: formatting SQL via SQLFluff
+
+Here's another example of formatting SQL, this time using
 [SQLFluff](https://sqlfluff.com/):
 
 ```elixir
