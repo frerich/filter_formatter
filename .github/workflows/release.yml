@@ -9,7 +9,7 @@ on:
 jobs:
   release:
     name: Create GitHub Release
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
